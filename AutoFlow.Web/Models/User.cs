@@ -11,6 +11,10 @@ namespace AutoFlow.Web.Models
         [MaxLength(100)]
         public string FullName { get; set; } = string.Empty;
 
+        public int RoleId { get; set; }
+
+        public Role? Role { get; set; }
+
         [Required]
         [EmailAddress]
         [MaxLength(150)]
@@ -18,10 +22,6 @@ namespace AutoFlow.Web.Models
 
         [Required]
         public string PasswordHash { get; set; } = string.Empty;
-
-        [Required]
-        [MaxLength(20)]
-        public string Role { get; set; } = string.Empty;
 
         public bool IsActive { get; set; } = true;
 
@@ -31,4 +31,4 @@ namespace AutoFlow.Web.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
-}
+} 
